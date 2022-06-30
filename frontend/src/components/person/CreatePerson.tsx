@@ -3,6 +3,7 @@ import { Form, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import { CREATE_PERSION } from "../../graphql";
 import PersonForm from "./PersonForm";
+import Title from "./Title";
 
 export default function CreatePerson() {
   const [form] = Form.useForm();
@@ -30,9 +31,9 @@ export default function CreatePerson() {
   };
 
   return (
-    <>
-      <div>CreatePerson</div>
+    <div className="layout">
+      <Title>CreatePerson</Title>
       <PersonForm onFinsh={onFinsh} form={form} />
-    </>
+    </div>
   );
 }

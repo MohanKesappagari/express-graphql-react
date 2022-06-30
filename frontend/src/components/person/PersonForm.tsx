@@ -46,7 +46,7 @@ export default function PersonForm({ onFinsh, form }: Props) {
             onClick={() => {
               nav("/");
             }}
-            type="primary"
+            className="btn"
             style={{
               backgroundColor: "red",
             }}
@@ -55,7 +55,7 @@ export default function PersonForm({ onFinsh, form }: Props) {
           </Button>
         </Col>
         <Col md={{ span: 5, offset: 1 }}>
-          <Button htmlType="submit" type="primary">
+          <Button className="btn" htmlType="submit" type="primary">
             Submit
           </Button>
         </Col>

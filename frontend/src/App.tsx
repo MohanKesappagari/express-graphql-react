@@ -1,7 +1,11 @@
 import "./App.css";
 import PersonRoutes from "./routes/PersonRoutes";
 const App = () => {
-  return <PersonRoutes />;
+  return (
+    <div className="app">
+      <PersonRoutes />
+    </div>
+  );
 };
 
 export default App;
