@@ -1,4 +1,4 @@
-import { Arg, Mutation, Query, Resolver } from "type-graphql";
+import { Arg, Int, Mutation, Query, Resolver } from "type-graphql";
 import { CreatePersonDto } from "./dto/create-person.dto";
 import { UpdatePersonDto } from "./dto/update-person.dto";
 import { Person } from "./entity/person.entity";
@@ -17,7 +17,7 @@ export class PersonResolver {
   }
 
   @Query(() => Person)
-  person(@Arg("userid") userid: number) {
+  person(@Arg("userid", () => Int) userid: number) {
     return PersonService.findOne(userid);
   }
 
@@ -27,7 +27,7 @@ export class PersonResolver {
   }
 
   @Mutation(() => Person)
-  deletePerson(@Arg("userid") userid: number) {
+  deletePerson(@Arg("userid", () => Int) userid: number) {
     return PersonService.remove(userid);
   }
 }
