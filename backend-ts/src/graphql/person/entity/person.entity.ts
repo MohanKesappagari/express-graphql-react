@@ -1,4 +1,4 @@
-import { Field, ID, ObjectType } from "type-graphql";
+import { Field, ID, Int, ObjectType } from "type-graphql";
 import {
   BaseEntity,
   Column,
@@ -13,7 +13,7 @@ import {
 export class Person extends BaseEntity {
   @Field(() => ID)
   @PrimaryGeneratedColumn()
-  id: number;
+  readonly userid: number;
 
   @Field()
   @Column()
@@ -22,6 +22,18 @@ export class Person extends BaseEntity {
   @Field()
   @Column()
   email: string;
+
+  @Field({ nullable: true })
+  @Column({ nullable: true })
+  mobile: string;
+
+  @Field()
+  @Column()
+  gender: string;
+
+  @Field(() => Int, { nullable: true })
+  @Column({ nullable: true })
+  age: number;
 
   @Field()
   @CreateDateColumn()
@@ -32,6 +44,6 @@ export class Person extends BaseEntity {
   updated: Date;
 
   @Field(() => Boolean)
-  @Column()
+  @Column({ default: true })
   isactive: boolean;
 }

@@ -8,6 +8,15 @@ export class CreatePersonDto {
   @Field()
   email: string;
 
-  @Field(() => Boolean)
-  isactive: boolean;
+  @Field({ nullable: true })
+  mobile?: string;
+
+  @Field()
+  gender: string;
+
+  @Field({ nullable: true })
+  age?: number;
+
+  @Field(() => Boolean, { nullable: true })
+  isactive?: boolean;
 }

@@ -1,8 +1,25 @@
 import { Field, InputType } from "type-graphql";
-import { CreatePersonDto } from "./create-person.dto";
 
 @InputType()
-export class UpdatePersonDto extends CreatePersonDto {
+export class UpdatePersonDto {
   @Field()
-  id: number;
+  userid: number;
+
+  @Field({ nullable: true })
+  name?: string;
+
+  @Field({ nullable: true })
+  email?: string;
+
+  @Field({ nullable: true })
+  mobile?: string;
+
+  @Field({ nullable: true })
+  gender?: string;
+
+  @Field({ nullable: true })
+  age?: number;
+
+  @Field(() => Boolean, { nullable: true })
+  isactive?: boolean;
 }
