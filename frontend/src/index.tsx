@@ -6,6 +6,7 @@ import App from "./App";
 import { GRAPHQL_URL } from "./constants";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+
 const client = new ApolloClient({
   uri: GRAPHQL_URL,
   cache: new InMemoryCache(),
