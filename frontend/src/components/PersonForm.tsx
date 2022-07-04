@@ -1,6 +1,6 @@
 import { Button, Col, Form, FormInstance, Input, Row, Select } from "antd";
 import { useNavigate } from "react-router-dom";
-import { FORM_VALUES } from "../../types";
+import { FORM_VALUES } from "../common/types";
 
 interface Props {
   onFinsh: (val: FORM_VALUES) => void;

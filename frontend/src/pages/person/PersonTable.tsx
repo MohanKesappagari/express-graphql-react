@@ -3,9 +3,9 @@ import { useMutation, useQuery } from "@apollo/client";
 import { Button, message, Table } from "antd";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { PERSON } from "../../common/types";
 import { ALL_PERSONS } from "../../graphql";
-import { PERSON } from "../../types";
-import { DELETE_USER } from "./../../graphql/index";
+import { DELETE_USER } from "../../graphql/index";
 
 export default function PersonTable() {
   const { data, loading, error, refetch } = useQuery(ALL_PERSONS);
