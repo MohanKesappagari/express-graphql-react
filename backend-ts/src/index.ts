@@ -8,6 +8,7 @@ import { AppDataSource } from "./typeorm-connect";
 const PORT = 5000;
 
 const main = async () => {
+  /* Creating a new ApolloServer instance and passing in the schema. */
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [PersonResolver],
@@ -22,6 +23,7 @@ const main = async () => {
   app.listen(PORT, () => console.log(`Running at ${PORT}`));
 };
 
+/* Initializing the database connection and then running the main function. */
 AppDataSource.initialize()
   .then(() => main())
   .catch((e) => console.log(e));

@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm";
+/* Creating a new DataSource object. */
 export const AppDataSource = new DataSource({
   type: "mysql",
   host: "localhost",
