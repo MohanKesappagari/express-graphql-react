@@ -2,10 +2,10 @@ import { useMutation, useQuery } from "@apollo/client";
 import { Form, message } from "antd";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import PersonForm from "../../components/PersonForm";
-import Title from "../../components/Title";
-import { FORM_VALUES } from "../../global/types";
-import { PERSON, UPDATE_PERSON } from "../../graphql";
+import PersonForm from "../components/PersonForm";
+import Title from "../components/Title";
+import { FORM_VALUES } from "../global/types";
+import { PERSON, UPDATE_PERSON } from "../graphql";
 
 /**
  * It fetches a person from the database, then sets the form values to the fetched person's values,

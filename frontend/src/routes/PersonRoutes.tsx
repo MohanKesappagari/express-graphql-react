@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import CreatePerson from "../pages/person/CreatePerson";
-import PersonTable from "../pages/person/PersonTable";
-import UpdatePerson from "../pages/person/UpdatePerson";
+import CreatePerson from "../pages/CreatePerson";
+import PersonTable from "../pages/PersonTable";
+import UpdatePerson from "../pages/UpdatePerson";
 
 /**
  * The PersonRoutes function returns a Routes component that contains three Route components.

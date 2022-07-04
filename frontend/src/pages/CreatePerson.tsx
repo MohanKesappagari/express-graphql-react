@@ -1,10 +1,10 @@
 import { useMutation } from "@apollo/client";
 import { Form, message } from "antd";
 import { useNavigate } from "react-router-dom";
-import PersonForm from "../../components/PersonForm";
-import Title from "../../components/Title";
-import { FORM_VALUES } from "../../global/types";
-import { CREATE_PERSION } from "../../graphql";
+import PersonForm from "../components/PersonForm";
+import Title from "../components/Title";
+import { FORM_VALUES } from "../global/types";
+import { CREATE_PERSION } from "../graphql";
 
 /**
  * It's a React function component that uses Antd to create a form, and then uses Apollo to create a
