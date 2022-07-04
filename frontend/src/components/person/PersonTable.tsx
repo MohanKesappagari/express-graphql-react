@@ -58,7 +58,7 @@ database. */
     },
     {
       title: "Actions",
-      render(val: string, obj: PERSON) {
+      render(value: string, record: PERSON, index: number) {
         return (
           <>
             <EditOutlined
@@ -67,7 +67,7 @@ database. */
                 cursor: "pointer",
                 color: "#13c2c2",
               }}
-              onClick={() => nav(`/update-person/${obj.userid}`)}
+              onClick={() => nav(`/update-person/${record.userid}`)}
             />
             <DeleteOutlined
               style={{
@@ -77,7 +77,7 @@ database. */
                 color: "#ff4d4f",
               }}
               spin={removep.loading}
-              onClick={() => deleteUser(Number(obj.userid))}
+              onClick={() => deleteUser(Number(record.userid))}
             />
           </>
         );
