@@ -4,7 +4,7 @@ import { FORM_VALUES } from "../global/types";
 
 interface Props {
   onFinsh: (val: FORM_VALUES) => void;
-  form: FormInstance;
+  form: FormInstance<FORM_VALUES>;
 }
 /* A form that takes in a name, email, mobile, gender, and age. */
 export default function PersonForm({ onFinsh, form }: Props) {
