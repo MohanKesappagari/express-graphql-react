@@ -1,10 +1,10 @@
-import { Button, Col, Form, Input, Row, Select } from "antd";
+import { Button, Col, Form, FormInstance, Input, Row, Select } from "antd";
 import { useNavigate } from "react-router-dom";
+import { FORM_VALUES } from "../../types";
 
 interface Props {
-  onFinsh: (val: any) => void;
-  form: any;
-  defaultValues?: any;
+  onFinsh: (val: FORM_VALUES) => void;
+  form: FormInstance;
 }
 export default function PersonForm({ onFinsh, form }: Props) {
   const nav = useNavigate();

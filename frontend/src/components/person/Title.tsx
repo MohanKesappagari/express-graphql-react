@@ -1,6 +1,10 @@
 import { Col, Row } from "antd";
+import React from "react";
 
-export default function Title({ children }: any) {
+interface Props {
+  children: React.ReactNode;
+}
+export default function Title({ children }: Props) {
   return (
     <div className="title">
       <Row>

@@ -3,6 +3,7 @@ import { Form, message } from "antd";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { PERSON, UPDATE_PERSON } from "../../graphql";
+import { FORM_VALUES } from "../../types";
 import PersonForm from "./PersonForm";
 import Title from "./Title";
 
@@ -20,14 +21,14 @@ export default function UpdatePerson() {
   useEffect(() => {
     refetch();
   }, []);
-  const onFinish = async (values: any) => {
+  const onFinish = async (values: FORM_VALUES) => {
     try {
       await update({
         variables: {
           updatePersonDto: {
             userid: Number(userid),
-            age: Number(values.age),
             ...values,
+            age: Number(values.age),
           },
         },
       });

@@ -4,6 +4,7 @@ import { Button, message, Table } from "antd";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ALL_PERSONS } from "../../graphql";
+import { PERSON } from "../../types";
 import { DELETE_USER } from "./../../graphql/index";
 
 export default function PersonTable() {
@@ -49,7 +50,7 @@ export default function PersonTable() {
     },
     {
       title: "Actions",
-      render(val: any, obj: any) {
+      render(val: string, obj: PERSON) {
         return (
           <>
             <EditOutlined
@@ -89,11 +90,11 @@ export default function PersonTable() {
       </Button>
       <Table
         columns={columns}
-        dataSource={data?.persons.map((val: any, index: number) => ({
+        dataSource={data?.persons.map((val: PERSON, index: number) => ({
           tableId: index + 1,
           ...val,
         }))}
-        rowKey={(record: any) => record.userid}
+        rowKey={(record: PERSON) => record.userid}
       />
     </div>
   );
