@@ -7,14 +7,17 @@ import { GRAPHQL_URL } from "./constants";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
+/* Creating a new ApolloClient instance. */
 const client = new ApolloClient({
   uri: GRAPHQL_URL,
   cache: new InMemoryCache(),
 });
+/* Creating a root element for the React app. */
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
+  /* Wrapping the App component with the ApolloProvider component. */
   <ApolloProvider client={client}>
     <BrowserRouter>
       <React.StrictMode>

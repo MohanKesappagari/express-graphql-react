@@ -3,6 +3,10 @@ import CreatePerson from "../components/person/CreatePerson";
 import PersonTable from "../components/person/PersonTable";
 import UpdatePerson from "../components/person/UpdatePerson";
 
+/**
+ * The PersonRoutes function returns a Routes component that contains three Route components.
+ * @returns The Routes component is being returned.
+ */
 export default function PersonRoutes() {
   return (
     <Routes>

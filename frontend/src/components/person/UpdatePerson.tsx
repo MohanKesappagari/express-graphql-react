@@ -7,6 +7,10 @@ import { FORM_VALUES } from "../../types";
 import PersonForm from "./PersonForm";
 import Title from "./Title";
 
+/**
+ * It fetches a person from the database, then sets the form values to the fetched person's values,
+ * then updates the person with the new values.
+ */
 export default function UpdatePerson() {
   const nav = useNavigate();
   const { userid } = useParams();

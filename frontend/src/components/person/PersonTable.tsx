@@ -12,11 +12,18 @@ export default function PersonTable() {
   const [remove, removep] = useMutation(DELETE_USER);
   const nav = useNavigate();
 
+  /* A hook that is called when the component is mounted. It is used to refetch the data from the
+database. */
   useEffect(() => {
     refetch();
     return () => {};
   }, []);
 
+  /**
+   * The deleteUser function takes a userid as an argument, and then uses the remove mutation to delete
+   * the user from the database, and then uses the refetch function to update the list of users.
+   * @param {number} userid - number - the id of the user to be deleted
+   */
   const deleteUser = async (userid: number) => {
     try {
       await remove({
@@ -31,6 +38,7 @@ export default function PersonTable() {
     }
   };
 
+  /* Defining the columns of the table. */
   const columns: any = [
     {
       title: "Sr.No",
@@ -76,9 +84,11 @@ export default function PersonTable() {
       },
     },
   ];
+
   if (loading) <h1>Loading</h1>;
 
   if (error) <h1>Error</h1>;
+  /* Returning a div with a button and a table. */
   return (
     <div className="layout">
       <Button

@@ -4,6 +4,7 @@ import React from "react";
 interface Props {
   children: React.ReactNode;
 }
+/* A function that returns a div with a row and a column. */
 export default function Title({ children }: Props) {
   return (
     <div className="title">

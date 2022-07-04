@@ -6,6 +6,7 @@ interface Props {
   onFinsh: (val: FORM_VALUES) => void;
   form: FormInstance;
 }
+/* A form that takes in a name, email, mobile, gender, and age. */
 export default function PersonForm({ onFinsh, form }: Props) {
   const nav = useNavigate();
   return (

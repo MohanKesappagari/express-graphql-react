@@ -1,3 +1,4 @@
+/* Defining the structure of an object. */
 export interface PERSON {
   userid: number;
   name: string;
@@ -9,6 +10,7 @@ export interface PERSON {
   updated: string;
   isactive: boolean;
 }
+/* A TypeScript interface. It is used to define the structure of an object. */
 export interface FORM_VALUES {
   name: string;
   email: string;

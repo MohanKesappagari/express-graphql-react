@@ -6,6 +6,11 @@ import { FORM_VALUES } from "../../types";
 import PersonForm from "./PersonForm";
 import Title from "./Title";
 
+/**
+ * It's a React function component that uses Antd to create a form, and then uses Apollo to create a
+ * person.
+ * @returns A function that returns a React component.
+ */
 export default function CreatePerson() {
   const [form] = Form.useForm();
   const [create] = useMutation(CREATE_PERSION);
