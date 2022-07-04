@@ -1,9 +1,9 @@
 import { useMutation } from "@apollo/client";
 import { Form, message } from "antd";
 import { useNavigate } from "react-router-dom";
-import { FORM_VALUES } from "../../common/types";
 import PersonForm from "../../components/PersonForm";
 import Title from "../../components/Title";
+import { FORM_VALUES } from "../../global/types";
 import { CREATE_PERSION } from "../../graphql";
 
 /**

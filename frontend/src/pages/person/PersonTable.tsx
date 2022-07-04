@@ -3,7 +3,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { Button, message, Table } from "antd";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { PERSON } from "../../common/types";
+import { PERSON } from "../../global/types";
 import { ALL_PERSONS } from "../../graphql";
 import { DELETE_USER } from "../../graphql/index";
 

@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { GRAPHQL_URL } from "./common/constants";
+import { GRAPHQL_URL } from "./global/constants";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
